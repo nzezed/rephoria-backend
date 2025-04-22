@@ -15,6 +15,11 @@ app.use(express.json());
 // configure multer for file uploads
 const upload = multer({ dest: 'uploads/' });
 
+// Health check / root route
+app.get('/', (req, res) => {
+  res.send('🤖 Rephoria API is live! Use POST /api/transcribe or /api/summarize');
+});
+
 // Transcription endpoint
 app.post('/api/transcribe', upload.single('audio'), async (req, res) => {
   try {
