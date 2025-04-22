@@ -34,7 +34,7 @@ app.post('/api/transcribe', upload.single('audio'), async (req, res) => {
       form,
       {
         headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${process.env.sk-AN0rDKW7RgW8-11pS8YLdgOKz6RlwPs3UFbRmlP97KT3BlbkFJa-ULpa6tWpmoz4x1KWAuPt6Yi66--63LIG2HyxsYMA}`,
           ...form.getHeaders(),
         },
       }
