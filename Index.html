@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f4f4f9;
+  }
+
+  h1, h2 {
+    color: #333;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  pre {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+</style>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rephoria Call Center API</title>
+</head>
+<body>
+  <h1>Rephoria Transcription & Summarization API</h1>
+
+  <h2>Upload Audio for Transcription</h2>
+  <form id="transcribeForm">
+    <input type="file" id="audioFile" name="audio" accept="audio/*" required />
+    <button type="submit">Transcribe</button>
+  </form>
+  <pre id="transcriptResult"></pre>
+
+  <h2>Upload Transcript for Summarization</h2>
+  <form id="summarizeForm">
+    <textarea id="transcriptText" name="transcript" placeholder="Paste the transcript here" required></textarea>
+    <button type="submit">Summarize</button>
+  </form>
+  <pre id="summaryResult"></pre>
+
+  <script src="app.js"></script>
+</body>
+</html>
